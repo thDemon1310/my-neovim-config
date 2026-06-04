@@ -1,2 +1,2 @@
 require("vim._core.ui2").enable({})
-require("utplaksh.options")
+require("utplaksh.core")
