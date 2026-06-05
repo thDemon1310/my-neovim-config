@@ -16,9 +16,14 @@ vim.pack.add({
     -- 3. FZF Native (Optional but highly recommended for speed)
     'https://github.com/nvim-telescope/telescope-fzf-native.nvim',
 
+    -- == TreeSitter == 
+    {src = 'https://github.com/nvim-treesitter/nvim-treesitter', branch = "main"},
+     -- git intigration
+     'https://github.com/lewis6991/gitsigns.nvim',
 })
 
 require("utplaksh.packageManager.plugins.colorTheme")
 require("utplaksh.packageManager.plugins.luaLine")
 require("utplaksh.packageManager.plugins.nvim-tree")
 require("utplaksh.packageManager.plugins.telescope")
+require("utplaksh.packageManager.plugins.treesitter")
