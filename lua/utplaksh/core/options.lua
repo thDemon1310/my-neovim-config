@@ -36,13 +36,17 @@ opt.signcolumn = "yes"
 opt.cmdheight = 0
 
 
--- cursorline 
+-- cursorline
 opt.cursorline = true
 
-vim.api.nvim_create_autocmd("TextYankPost",{
+vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanked (copying) text",
     callback = function()
         vim.hl.on_yank()
     end,
 })
 
+vim.diagnostic.config({
+    virtual_text = true,
+    underline = true
+})

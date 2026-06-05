@@ -17,6 +17,13 @@ vim.pack.add({
     'https://github.com/nvim-telescope/telescope-fzf-native.nvim',
 
     -- == TreeSitter == 
+    -- === COnfigration for the lsp ===
+    -- nvim lsp-config
+    "https://github.com/neovim/nvim-lspconfig",
+    -- nvim lsp manager mason
+    "https://github.com/mason-org/mason.nvim",
+    -- mason Lspcongi
+    "https://github.com/mason-org/mason-lspconfig.nvim",
     {
         src = 'https://github.com/nvim-treesitter/nvim-treesitter', branch = "main"
     },
@@ -37,6 +44,7 @@ require("utplaksh.packageManager.plugins.nvim-tree")
 require("utplaksh.packageManager.plugins.telescope")
 require("utplaksh.packageManager.plugins.treesitter")
 require("utplaksh.packageManager.plugins.indent")
+require("utplaksh.packageManager.plugins.lsp")
 
 -- Open LazyGit floating window
 vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
