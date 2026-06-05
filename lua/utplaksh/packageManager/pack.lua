@@ -17,14 +17,19 @@ vim.pack.add({
     'https://github.com/nvim-telescope/telescope-fzf-native.nvim',
 
     -- == TreeSitter == 
-    {src = 'https://github.com/nvim-treesitter/nvim-treesitter', branch = "main"},
+    {
+        src = 'https://github.com/nvim-treesitter/nvim-treesitter', branch = "main"
+    },
 
      -- git intigration
      'https://github.com/lewis6991/gitsigns.nvim',
 
      -- indent line
-     "https://github.com/lukas-reineke/indent-blankline.nvim"
-})
+     "https://github.com/lukas-reineke/indent-blankline.nvim",
+
+     -- lazygit plugin
+     "https://github.com/kdheepak/lazygit.nvim",
+ })
 
 require("utplaksh.packageManager.plugins.colorTheme")
 require("utplaksh.packageManager.plugins.luaLine")
@@ -32,3 +37,7 @@ require("utplaksh.packageManager.plugins.nvim-tree")
 require("utplaksh.packageManager.plugins.telescope")
 require("utplaksh.packageManager.plugins.treesitter")
 require("utplaksh.packageManager.plugins.indent")
+
+-- Open LazyGit floating window
+vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
+
