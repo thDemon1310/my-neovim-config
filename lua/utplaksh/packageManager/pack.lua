@@ -37,7 +37,9 @@ vim.pack.add({
     {
         src = "https://github.com/saghen/blink.cmp",
         version = vim.version.range("1.*")
-    }
+    },
+    -- Mason tool installer
+    'https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim'
 })
 
 require("utplaksh.packageManager.plugins.colorTheme")
