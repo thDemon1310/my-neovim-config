@@ -6,7 +6,7 @@ vim.pack.add({
     -- lua line 
     'https://github.com/nvim-lualine/lualine.nvim',
     -- nvim-tree
-    'https://github.com/nvim-tree/nvim-tree.lua'
+    'https://github.com/nvim-tree/nvim-tree.lua',
 
 })
 
