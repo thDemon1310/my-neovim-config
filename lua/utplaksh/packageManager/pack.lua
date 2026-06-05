@@ -18,8 +18,12 @@ vim.pack.add({
 
     -- == TreeSitter == 
     {src = 'https://github.com/nvim-treesitter/nvim-treesitter', branch = "main"},
+
      -- git intigration
      'https://github.com/lewis6991/gitsigns.nvim',
+
+     -- indent line
+     "https://github.com/lukas-reineke/indent-blankline.nvim"
 })
 
 require("utplaksh.packageManager.plugins.colorTheme")
@@ -27,3 +31,4 @@ require("utplaksh.packageManager.plugins.luaLine")
 require("utplaksh.packageManager.plugins.nvim-tree")
 require("utplaksh.packageManager.plugins.telescope")
 require("utplaksh.packageManager.plugins.treesitter")
+require("utplaksh.packageManager.plugins.indent")

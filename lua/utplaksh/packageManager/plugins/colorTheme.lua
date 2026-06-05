@@ -16,14 +16,14 @@ require('kanagawa').setup({
     },
     overrides = function(colors) -- add/modify highlights
         return {
-            Visual = {bg = "#2E3C64", fg = "none" }
-        }
+            Visual = { bg = "#2D4F67", fg = "none" }, 
+        }    
     end,
-    theme = "wave",              -- Load "wave" theme
-    background = {               -- map the value of 'background' option to a theme
-        dark = "wave",           -- try "dragon" !
-        light = "lotus"
-    },
-})
+        theme = "wave",              -- Load "wave" theme
+        background = {               -- map the value of 'background' option to a theme
+            dark = "wave",           -- try "dragon" !
+            light = "lotus"
+        },
+    })
 
-vim.cmd("colorscheme kanagawa-wave")
+    vim.cmd("colorscheme kanagawa-wave")
