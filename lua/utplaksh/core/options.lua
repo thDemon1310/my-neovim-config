@@ -29,24 +29,23 @@ opt.undofile = true
 
 opt.clipboard:append("unnamedplus")
 opt.isfname:append("@-@")
-opt.guicursor = ""
+-- opt.guicursor = ""
 opt.scrolloff = 8
 
 opt.signcolumn = "yes"
-opt.cmdheight = 0
-
+-- opt.cmdheight = 0
 
 -- cursorline
 opt.cursorline = true
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-    desc = "Highlight when yanked (copying) text",
-    callback = function()
-        vim.hl.on_yank()
-    end,
+	desc = "Highlight when yanked (copying) text",
+	callback = function()
+		vim.hl.on_yank()
+	end,
 })
 
 vim.diagnostic.config({
-    virtual_text = true,
-    underline = true
+	virtual_text = true,
+	underline = true,
 })

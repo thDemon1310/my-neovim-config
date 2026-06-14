@@ -40,6 +40,8 @@ vim.pack.add({
 	},
 	-- Mason tool installer
 	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
+	-- snippit engine
+	"https://github.com/L3MON4D3/LuaSnip",
 })
 
 require("utplaksh.packageManager.plugins.colorTheme")
