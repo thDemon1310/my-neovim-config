@@ -31,6 +31,48 @@ vim.lsp.config("lua_ls", {
 })
 vim.lsp.enable(lsp_names)
 local keymap = vim.keymap
+
+-- Go to definition
 keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
--- keymap.set("n", "<A-F>", vim.lsp.buf.format, { desc = "Format local buffer" }) -- Go to "./conform.lua
-keymap.set("n", "df", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+-- Go to declaration
+keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+-- Show hover documentation
+keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover documentation" })
+-- Find references
+keymap.set("n", "gr", vim.lsp.buf.references, { desc = "Find references" })
+-- Go to implementation
+keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "Go to implementation" })
+-- Go to type definition
+keymap.set("n", "gt", vim.lsp.buf.type_definition, { desc = "Go to type definition" })
+-- Rename symbol
+keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename symbol" })
+-- Code actions
+keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {
+	desc = "Code actions",
+})
+-- Show diagnostics for current line
+keymap.set("n", "df", vim.diagnostic.open_float, {
+	desc = "Line diagnostics",
+})
+
+-- Previous diagnostic
+keymap.set("n", "[d", function()
+	vim.diagnostic.jump({
+		count = -1,
+		float = true,
+	})
+end, { desc = "Previous diagnostic" })
+
+-- Next diagnostic
+
+keymap.set("n", "]d", function()
+	vim.diagnostic.jump({
+		count = 1,
+		float = true,
+	})
+end, { desc = "Next diagnostic" })
+
+-- Populate quickfix list with diagnostics
+keymap.set("n", "<leader>q", vim.diagnostic.setqflist, {
+	desc = "Diagnostics to quickfix",
+})
