@@ -30,6 +30,16 @@ vim.lsp.config("lua_ls", {
 	},
 })
 vim.lsp.enable(lsp_names)
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+	callback = function(args)
+		vim.lsp.buf.format({
+			bufnr = args.buf,
+			async = false,
+		})
+	end,
+})
+
 local keymap = vim.keymap
 keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Go to definition" })
 keymap.set("n", "<A-F>", vim.lsp.buf.format, { desc = "Format local buffer" })

@@ -52,6 +52,7 @@ require("utplaksh.packageManager.plugins.treesitter")
 require("utplaksh.packageManager.plugins.indent")
 require("utplaksh.packageManager.plugins.lsp")
 require("utplaksh.packageManager.plugins.autoComplete")
+require("utplaksh.packageManager.plugins.conform")
 
 -- Open LazyGit floating window
 vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })

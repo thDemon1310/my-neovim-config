@@ -29,7 +29,7 @@ opt.undofile = true
 
 opt.clipboard:append("unnamedplus")
 opt.isfname:append("@-@")
--- opt.guicursor = ""
+opt.guicursor = ""
 opt.scrolloff = 8
 
 opt.signcolumn = "yes"
