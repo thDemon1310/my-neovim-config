@@ -1,3 +1,12 @@
+vim.pack.add({
+	-- === TELESCOPE & DEPENDENCIES ===
+	-- 1. Plenary (Required dependency for Telescope)
+	"https://github.com/nvim-lua/plenary.nvim",
+	-- 2. Telescope core
+	"https://github.com/nvim-telescope/telescope.nvim",
+	-- 3. FZF Native (Optional but highly recommended for speed)
+	"https://github.com/nvim-telescope/telescope-fzf-native.nvim",
+})
 -- You dont need to set any of these options. These are the default ones. Only
 -- the loading is important
 require("telescope").setup({
