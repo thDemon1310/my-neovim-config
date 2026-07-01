@@ -26,6 +26,7 @@ require("mason-tool-installer").setup({
 		"prettier",
 		"stylua",
 		"dotenv-linter",
+		"css-lsp",
 	},
 })
 local capabilities = require("blink.cmp").get_lsp_capabilities()
