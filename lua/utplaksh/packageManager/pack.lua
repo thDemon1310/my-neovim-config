@@ -26,6 +26,7 @@ require("utplaksh.packageManager.plugins.indent")
 require("utplaksh.packageManager.plugins.blink")
 require("utplaksh.packageManager.plugins.lsp")
 require("utplaksh.packageManager.plugins.conform")
+require("utplaksh.packageManager.plugins.image")
 
 -- Open LazyGit floating window
 vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
