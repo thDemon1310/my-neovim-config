@@ -27,6 +27,7 @@ require("mason-tool-installer").setup({
 		"stylua",
 		"dotenv-linter",
 		"css-lsp",
+		"docker-language-server",
 	},
 })
 local capabilities = require("blink.cmp").get_lsp_capabilities()

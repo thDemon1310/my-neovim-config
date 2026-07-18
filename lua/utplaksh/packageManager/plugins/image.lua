@@ -1,14 +1,6 @@
--- 1. Tell Neovim where to find the 'magick' rock you installed via terminal
-package.path = package.path
-	.. ";"
-	.. vim.fn.expand("~/.luarocks/share/lua/5.1/?.lua;")
-	.. vim.fn.expand("~/.luarocks/share/lua/5.1/?/init.lua;")
-package.cpath = package.cpath .. ";" .. vim.fn.expand("~/.luarocks/lib/lua/5.1/?.so;")
-
 -- 2. Load the plugins
 vim.pack.add({
 	"https://github.com/3rd/image.nvim",
-	"https://github.com/vhyrro/luarocks.nvim",
 })
 
 local image = require("image")
@@ -16,7 +8,6 @@ local image = require("image")
 -- 3. Setup image.nvim
 image.setup({
 	backend = "kitty",
-	processor = "magick_rock", -- FIXED: Switched to the lua rock we installed, not the CLI
 	integrations = {
 		markdown = {
 			enabled = true,

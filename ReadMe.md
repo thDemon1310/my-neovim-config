@@ -37,3 +37,9 @@ plugins=(git zsh-syntax-highlighting)
 ```bash
 
 ```
+
+## Neovim PLugion Dependency
+### Image
+```bash
+sudo apt install imagemagick
+```
