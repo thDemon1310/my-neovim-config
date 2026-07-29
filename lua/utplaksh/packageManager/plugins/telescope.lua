@@ -1,3 +1,12 @@
+vim.api.nvim_create_autocmd("PackChanged", {
+	callback = function(ev)
+		if ev.data.spec.name == "telescope-fzf-native.nvim" then
+			vim.fn.system("make -C " .. ev.data.path)
+		end
+	end,
+})
+
+
 vim.pack.add({
 	-- === TELESCOPE & DEPENDENCIES ===
 	-- 1. Plenary (Required dependency for Telescope)
@@ -42,3 +51,4 @@ vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live gr
 vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 vim.keymap.set("n", "<leader>fw", builtin.grep_string, { desc = "Find string under the cursor" })
+vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Telescope diagnostics" })
