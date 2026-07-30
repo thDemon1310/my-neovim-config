@@ -13,7 +13,7 @@ require("mason").setup()
 local lsp_names = {
 	"lua_ls",
 	"eslint",
-	"ts_ls",
+	"vtsls",
 	"tailwindcss",
 	"graphql",
 	"html",
@@ -67,20 +67,6 @@ keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {
 keymap.set("n", "df", vim.diagnostic.open_float, {
 	desc = "Line diagnostics",
 })
--- Previous diagnostic
-keymap.set("n", "[d", function()
-	vim.diagnostic.jump({
-		count = -1,
-		float = true,
-	})
-end, { desc = "Previous diagnostic" })
--- Next diagnostic
-keymap.set("n", "]d", function()
-	vim.diagnostic.jump({
-		count = 1,
-		float = true,
-	})
-end, { desc = "Next diagnostic" })
 -- Populate quickfix list with diagnostics
 keymap.set("n", "<leader>q", vim.diagnostic.setqflist, {
 	desc = "Diagnostics to quickfix",
