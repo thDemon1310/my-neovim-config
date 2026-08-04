@@ -28,6 +28,7 @@ require("utplaksh.packageManager.plugins.lsp")
 require("utplaksh.packageManager.plugins.conform")
 require("utplaksh.packageManager.plugins.image")
 require("utplaksh.packageManager.plugins.autoTag")
+require("utplaksh.packageManager.plugins.colorPallet")
 
 -- Open LazyGit floating window
 vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
