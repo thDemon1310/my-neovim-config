@@ -3,10 +3,10 @@ vim.pack.add({
 	"https://github.com/rebelot/kanagawa.nvim",
 	-- web devicons
 	"https://github.com/nvim-tree/nvim-web-devicons",
+	-- file icons
+	"https://github.com/nvim-mini/mini.icons",
 	-- lua line
 	"https://github.com/nvim-lualine/lualine.nvim",
-	-- nvim-tree
-	"https://github.com/nvim-tree/nvim-tree.lua",
 	-- git intigration
 	"https://github.com/lewis6991/gitsigns.nvim",
 	-- indent line
@@ -19,7 +19,6 @@ vim.pack.add({
 
 require("utplaksh.packageManager.plugins.colorTheme")
 require("utplaksh.packageManager.plugins.luaLine")
-require("utplaksh.packageManager.plugins.nvim-tree")
 require("utplaksh.packageManager.plugins.telescope")
 require("utplaksh.packageManager.plugins.treesitter")
 require("utplaksh.packageManager.plugins.indent")
@@ -29,6 +28,7 @@ require("utplaksh.packageManager.plugins.conform")
 require("utplaksh.packageManager.plugins.image")
 require("utplaksh.packageManager.plugins.autoTag")
 require("utplaksh.packageManager.plugins.colorPallet")
+require("utplaksh.packageManager.plugins.oilFileExplore")
 
 -- Open LazyGit floating window
 vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
