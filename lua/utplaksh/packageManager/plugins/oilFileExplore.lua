@@ -2,6 +2,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.pack.add({
 	"https://github.com/stevearc/oil.nvim",
+	"https://github.com/malewicz1337/oil-git.nvim",
 })
 
 local oil = require("oil")
@@ -21,6 +22,14 @@ oil.setup({
 		["<C-h>"] = false, -- unbind if it clashes with window-nav keymaps
 		["<C-l>"] = false,
 	},
+})
+
+require("oil-git").setup({
+	show_file_highlights = true,
+	show_directory_highlights = true,
+	symbol_position = "eol", -- appends status symbols at end of line; no oil column/signcolumn changes needed
+	show_ignored_files = true,
+	show_ignored_directories = true,
 })
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
